@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="835.0" style="-fx-background-color: #F8F2FB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.HelloController">
+    <Pane layoutX="16.0" layoutY="76.0" prefHeight="417.0" prefWidth="802.0" style="-fx-background-color: #fbe4ff;">
+        <children>
+            <Text fill="#e0aaff" layoutX="336.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="resource assignator" wrappingWidth="979.4989013671875">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="37.0" />
+                </font>
+            </Text>
+            <ImageView fitHeight="236.0" fitWidth="362.0" layoutX="390.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="https://i.ibb.co/SnxCFTp/animatie.jpg" />
+                </image>
+            </ImageView>
+            <Button fx:id="exitButton" alignment="CENTER" layoutX="32.0" layoutY="309.0" mnemonicParsing="false" onAction="#setExit" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: #e0aaff; -fx-text-fill: #EEF7FB; -fx-background-radius: 15;" text="Exit">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="22.0" />
+                </font>
+            </Button>
+            <Button fx:id="aboutUsButton" alignment="CENTER" layoutX="32.0" layoutY="199.0" mnemonicParsing="false" onAction="#switchAboutUs" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: #e0aaff; -fx-text-fill: #EEF7FB; -fx-background-radius: 15;" text="About us">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="22.0" />
+                </font>
+            </Button>
+            <Button fx:id="getStartedButton" alignment="CENTER" layoutX="32.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchGetStarted" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: #e0aaff; -fx-text-fill: #EEF7FB; -fx-background-radius: 15;" text="Get started">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="22.0" />
+                </font>
+            </Button>
+            <Button fx:id="helpButton" alignment="CENTER" layoutX="32.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchHelp" prefHeight="46.0" prefWidth="227.0" style="-fx-background-color: #e0aaff; -fx-text-fill: #EEF7FB; -fx-background-radius: 15;" text="Help">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="22.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+    <Pane prefHeight="56.0" prefWidth="835.0" style="-fx-background-color: #e0aaff;">
+        <children>
+            <Button fx:id="roomsButton" alignment="BOTTOM_LEFT" layoutX="743.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchRooms" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="Rooms">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="teachersButton" alignment="BOTTOM_LEFT" layoutX="661.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchTeachers" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="Teachers">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="subjectsButton" alignment="BOTTOM_LEFT" layoutX="578.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchSubjects" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="Subjects">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+    <Text fill="#e0aaff" layoutX="46.0" layoutY="168.0" stroke="#631db0" strokeType="OUTSIDE" strokeWidth="2.0" text="Faculty of Computer Science " wrappingWidth="979.4989013671875">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="48.0" />
+        </font>
+    </Text>
+</AnchorPane>

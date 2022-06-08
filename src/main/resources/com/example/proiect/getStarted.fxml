@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="835.0" style="-fx-background-color: #F8F2FB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.HelloController">
+    <Pane layoutX="16.0" layoutY="76.0" prefHeight="417.0" prefWidth="802.0" style="-fx-background-color: #fbe4ff;">
+      <children>
+         <Button fx:id="distributeE" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchE" prefHeight="56.0" prefWidth="775.0" style="-fx-background-radius: 20; -fx-background-color: #e0aaff;" text="Distribute the events!" textFill="#f3eaf9">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="23.0" />
+            </font>
+         </Button>
+         <Button fx:id="distributeR" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchR" prefHeight="56.0" prefWidth="775.0" style="-fx-background-radius: 20; -fx-background-color: #e0aaff;" text="Distribute the resources!" textFill="#f3eaf9">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="23.0" />
+            </font>
+         </Button>
+         <ImageView fx:id="poza" fitHeight="200.0" fitWidth="400.0" layoutX="300.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+             <Image url="https://i.ibb.co/6NJ1JJP/alta-ilu.jpg" />
+             </image>
+         </ImageView>
+      </children></Pane>
+    <Pane prefHeight="56.0" prefWidth="835.0" style="-fx-background-color: #e0aaff;">
+        <children>
+            <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchHomepage" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="🠔">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+</AnchorPane>

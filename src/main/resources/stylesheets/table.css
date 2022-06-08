@@ -1,0 +1,83 @@
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #e7c6ff;
+    -fx-stroke: #240046;
+    -fx-stroke-width: 2;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, rgb(224, 170, 255), rgba(123, 44, 191, 1));
+    -fx-background-radius: 0px 0px 0px 0px;
+    -fx-background-insets: 0 0px 0 0;
+    -fx-padding: 10 0 10px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-text-alignment: center;
+    -fx-font-size: 15;
+}
+
+.table-view .table-cell{
+    -fx-border-color: #c77dff;
+    -fx-border-width: 0.5;
+    -fx-padding: 2 0 2 10px;
+}
+
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 3;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #E0AAFFFF, #7B2CBFFF);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to bottom, #E0AAFFFF, #7B2CBFFF);
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #E0AAFF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #C77DFF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #7B2CBFFF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #240046;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 12;
+}

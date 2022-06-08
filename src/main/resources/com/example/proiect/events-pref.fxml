@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="835.0" style="-fx-background-color: #F8F2FB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.EventController">
+    <Pane layoutX="16.0" layoutY="76.0" prefHeight="417.0" prefWidth="802.0" style="-fx-background-color: #fbe4ff;">
+        <children>
+            <Text fill="#3a015c" layoutX="14.0" layoutY="53.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Give me details about the event!" wrappingWidth="812.5366821289062">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="48.0" />
+                </font>
+            </Text>
+         <Pane layoutX="23.0" layoutY="72.0" prefHeight="330.0" prefWidth="404.0" style="-fx-background-color: c4a3e1; -fx-background-radius: 20;">
+            <children>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="36.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Name of event:" wrappingWidth="298.13665771484375">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="22.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="104.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Capacity of event:" wrappingWidth="308.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="22.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="173.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Teacher:" wrappingWidth="339.73663330078125">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="22.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="245.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Subject:" wrappingWidth="270.93670654296875">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="22.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="nameEvent" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="340.0" />
+               <TextField fx:id="capacityEvent" layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="340.0" />
+               <TextField fx:id="nameTeacher" layoutX="14.0" layoutY="178.0" prefHeight="25.0" prefWidth="340.0" />
+               <TextField fx:id="nameSubject" layoutX="14.0" layoutY="250.0" prefHeight="25.0" prefWidth="340.0" />
+               <Button fx:id="addEvent" layoutX="152.0" layoutY="286.0" mnemonicParsing="false" onAction="#submit" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #fbe4ff;" text="Add event" textFill="#c4a3e1">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="15.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+         <Button fx:id="statistics" layoutX="527.0" layoutY="372.0" mnemonicParsing="false" onAction="#switchStatistics" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: D8C2FF; -fx-border-color: c4a3e1; -fx-border-radius: 20; -fx-background-radius: 20;" text="Generate statistics!" textFill="#5a189a">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Button>
+         <Text fx:id="booleanVal" fill="#b667e7" layoutX="541.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="3.0" wrappingWidth="185.0">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="12.0" />
+            </font>
+         </Text>
+         <Button fx:id="seeEvents" layoutX="527.0" layoutY="312.0" mnemonicParsing="false" onAction="#switchEvents" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: D8C2FF; -fx-border-color: c4a3e1; -fx-border-radius: 20; -fx-background-radius: 20;" text="See events!" textFill="#5a189a">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Button>
+         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="541.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="https://i.ibb.co/qMjWGfs/1754398.png" />
+             </image>
+         </ImageView>
+
+        </children></Pane>
+    <Pane prefHeight="56.0" prefWidth="835.0" style="-fx-background-color: #e0aaff;">
+        <children>
+            <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="🠔">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+</AnchorPane>

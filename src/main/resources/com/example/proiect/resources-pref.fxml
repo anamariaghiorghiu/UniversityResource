@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="835.0" style="-fx-background-color: #F8F2FB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.ResourceController">
+    <Pane layoutX="16.0" layoutY="76.0" prefHeight="417.0" prefWidth="802.0" style="-fx-background-color: #fbe4ff;">
+        <children>
+            <Text fill="#3a015c" layoutX="14.0" layoutY="53.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="What resources do you want to assign?" wrappingWidth="812.5366821289062">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="51.0" />
+                </font>
+            </Text>
+         <Pane layoutX="12.0" layoutY="130.0" prefHeight="271.0" prefWidth="367.0" style="-fx-background-color: c4a3e1; -fx-background-radius: 20;">
+            <children>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="40.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Name of resource:" wrappingWidth="428.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="26.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="104.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Room where to assign:" wrappingWidth="428.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="26.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="162.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Event to assign:" wrappingWidth="428.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="26.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="nameResource" layoutX="14.0" layoutY="46.0" prefHeight="25.0" prefWidth="260.0" />
+               <TextField fx:id="roomResource" layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="260.0" />
+               <TextField fx:id="eventResource" layoutX="14.0" layoutY="168.0" prefHeight="25.0" prefWidth="260.0" />
+               <Button fx:id="addResource" layoutX="123.0" layoutY="230.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #fbe4ff;" text="Add resource" textFill="#c4a3e1">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="15.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+         <Pane layoutX="410.0" layoutY="130.0" prefHeight="130.0" prefWidth="287.0" style="-fx-background-color: c4a3e1; -fx-border-radius: 20; -fx-background-radius: 20;">
+            <children>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="32.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="Resource:" wrappingWidth="428.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="26.0" />
+                  </font>
+               </Text>
+               <Text fill="#3a015c" layoutX="14.0" layoutY="90.0" stroke="#b67be6" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" style="-fx-stroke: #b67be6;" text="How many left:" wrappingWidth="428.53668212890625">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="26.0" />
+                  </font>
+               </Text>
+               <Text fx:id="resource" fill="#3a015c" layoutX="44.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="20.0" />
+                  </font>
+               </Text>
+               <Text fx:id="numberOfResources" fill="#3a015c" layoutX="42.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="20.0" />
+                  </font>
+               </Text>
+            </children>
+         </Pane>
+         <Button fx:id="statistics" layoutX="461.0" layoutY="371.0" mnemonicParsing="false" onAction="#switchResources" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: D8C2FF; -fx-border-color: c4a3e1; -fx-border-radius: 20; -fx-background-radius: 20;" text="See resources!" textFill="#5a189a">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="15.0" />
+            </font>
+         </Button>
+         <Text fx:id="booleanVal" fill="#b667e7" layoutX="477.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="3.0" wrappingWidth="185.0">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="12.0" />
+            </font>
+         </Text>
+         <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="515.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url = "https://i.ibb.co/WssB805/laptop-icon-png-favpng-Re95r-Hk-Z7tz-XSEQRa-Jsq-GJRQ1.jpg"/>
+             </image>
+         </ImageView>
+
+        </children></Pane>
+    <Pane prefHeight="56.0" prefWidth="835.0" style="-fx-background-color: #e0aaff;">
+        <children>
+            <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="🠔">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+</AnchorPane>

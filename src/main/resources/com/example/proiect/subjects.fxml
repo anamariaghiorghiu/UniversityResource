@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="835.0" style="-fx-background-color: #F8F2FB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiect.SubjectsController">
+    <Pane layoutX="16.0" layoutY="76.0" prefHeight="417.0" prefWidth="802.0" style="-fx-background-color: #fbe4ff;">
+      <children>
+         <TableView fx:id="subjectsTable" layoutX="9.0" layoutY="10.0" prefHeight="398.0" prefWidth="786.0">
+           <columns>
+             <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+             <TableColumn fx:id="colName" prefWidth="361.60001373291016" text="NUME" />
+               <TableColumn fx:id="colTip" prefWidth="256.8000183105469" text="TIP" />
+           </columns>
+         </TableView>
+      </children></Pane>
+    <Pane prefHeight="56.0" prefWidth="835.0" style="-fx-background-color: #e0aaff;">
+        <children>
+            <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #F8F2FB; -fx-text-fill: #631db0; -fx-background-radius: 15;" text="🠔">
+                <font>
+                    <Font name="Malgun Gothic Semilight" size="14.0" />
+                </font>
+            </Button>
+        </children>
+    </Pane>
+</AnchorPane>
