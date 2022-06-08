@@ -15,13 +15,13 @@ import java.io.IOException;
 
 public class DisplayRController {
     @FXML
-    private TableColumn<ResourceFX, Integer> colId;
+    private TableColumn<Resource, Integer> colId;
     @FXML
-    private TableColumn<ResourceFX, String> colName;
+    private TableColumn<Resource, String> colName;
     @FXML
-    private TableColumn<ResourceFX, String> colNameRoom;
+    private TableColumn<Resource, String> colNameRoom;
     @FXML
-    private TableColumn<ResourceFX, String> colNameEvent;
+    private TableColumn<Resource, String> colNameEvent;
     Stage stage;
     @FXML
     private TableView resourcesTable;
@@ -41,10 +41,10 @@ public class DisplayRController {
         colNameRoom.setCellValueFactory(cellData -> cellData.getValue().getNameRoomProperty());
         colNameEvent.setCellValueFactory(cellData -> cellData.getValue().getNameEventProperty());
         ResourceDB resource = new ResourceDB();
-        ObservableList<ResourceFX> resourceList = resource.getAllFields();
+        ObservableList<Resource> resourceList = resource.getAllFields();
         populateTable(resourceList);
     }
-    private void populateTable(ObservableList<ResourceFX> resourceList){
+    private void populateTable(ObservableList<Resource> resourceList){
         resourcesTable.setItems(resourceList);
     }
 }

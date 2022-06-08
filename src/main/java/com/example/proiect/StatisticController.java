@@ -1,6 +1,6 @@
 package com.example.proiect;
 
-import Database.RoomDB;
+import Database.StatsDB;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,19 +13,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class RoomsController {
+public class StatisticController {
     @FXML
-    private TableColumn<RoomFX, Integer> colId;
+    private TableColumn<Statistic, Integer> colId;
     @FXML
-    private TableColumn<RoomFX, String> colName;
+    private TableColumn<Statistic, String> colName;
     @FXML
-    private TableColumn<RoomFX, Integer> colCapacity;
+    private TableColumn<Statistic, String> colAssignedRoom;
     Stage stage;
     @FXML
-    private TableView roomsTable;
+    private TableView statsTable;
 
     public void back(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("events-pref.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(fxmlLoader.load(), 835, 508);
         stage.setScene(scene);
@@ -36,13 +36,13 @@ public class RoomsController {
     private void initialize() throws Exception {
         colId.setCellValueFactory(cellData -> cellData.getValue().getIdProperty().asObject());
         colName.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
-        colCapacity.setCellValueFactory(cellData -> cellData.getValue().getCapacityProperty().asObject());
-        RoomDB room = new RoomDB();
-        ObservableList<RoomFX> roomList = room.getAllFields();
-        populateTable(roomList);
+        colAssignedRoom.setCellValueFactory(cellData -> cellData.getValue().getAssignedRoomProperty());
+        StatsDB stats = new StatsDB();
+        ObservableList<Statistic> statsList = stats.getAllFields();
+        populateTable(statsList);
     }
 
-    private void populateTable(ObservableList<RoomFX> roomList) {
-        roomsTable.setItems(roomList);
+    private void populateTable(ObservableList<Statistic> statsList) {
+        statsTable.setItems(statsList);
     }
 }

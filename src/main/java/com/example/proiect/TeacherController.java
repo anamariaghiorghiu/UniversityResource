@@ -13,22 +13,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TeachersController {
+public class TeacherController{
     @FXML
-    private TableColumn<TeacherFX, Integer> colId;
+    private TableColumn<Teacher, Integer> colId;
     @FXML
-    private TableColumn<TeacherFX, String> colName;
+    private TableColumn<Teacher, String> colName;
     @FXML
-    private TableColumn<TeacherFX, String> colGradDidactic;
-    @FXML
-    private TableColumn<TeacherFX, Integer> colIdMaterie1;
-    @FXML
-    private TableColumn<TeacherFX, Integer> colIdMaterie2;
-    @FXML
-    private TableColumn<TeacherFX, Integer> colIdMaterie3;
+    private TableColumn<Teacher, String> colGradDidactic;
+
     Stage stage;
     @FXML
     private TableView teachersTable;
+    ActionEvent event;
 
     public void back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -37,20 +33,19 @@ public class TeachersController {
         stage.setScene(scene);
         stage.show();
     }
+
+
     @FXML
     private void initialize() throws Exception{
         colId.setCellValueFactory(cellData -> cellData.getValue().getIdProperty().asObject());
         colName.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
         colGradDidactic.setCellValueFactory(cellData -> cellData.getValue().getGradDidacticProperty());
-        colIdMaterie1.setCellValueFactory(cellData -> cellData.getValue().getIdMaterie1Property().asObject());
-        colIdMaterie2.setCellValueFactory(cellData -> cellData.getValue().getIdMaterie2Property().asObject());
-        colIdMaterie3.setCellValueFactory(cellData -> cellData.getValue().getIdMaterie3Property().asObject());
         TeacherDB teacher = new TeacherDB();
-        ObservableList<TeacherFX> teacherList = teacher.getAllFields();
+        ObservableList<Teacher> teacherList = teacher.getAllFields();
         populateTable(teacherList);
     }
 
-    private void populateTable(ObservableList<TeacherFX> teacherList){
+    private void populateTable(ObservableList<Teacher> teacherList){
         teachersTable.setItems(teacherList);
     }
 }

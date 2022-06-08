@@ -15,15 +15,15 @@ import java.io.IOException;
 
 public class DisplayEController {
     @FXML
-    private TableColumn<EventFX, Integer> colId;
+    private TableColumn<Event, Integer> colId;
     @FXML
-    private TableColumn<EventFX, String> colName;
+    private TableColumn<Event, String> colName;
     @FXML
-    private TableColumn<EventFX, Integer> colCapacity;
+    private TableColumn<Event, Integer> colCapacity;
     @FXML
-    private TableColumn<EventFX, String> colNameTeacher;
+    private TableColumn<Event, String> colNameTeacher;
     @FXML
-    private TableColumn<EventFX, String> colNameSubject;
+    private TableColumn<Event, String> colNameSubject;
     Stage stage;
     @FXML
     private TableView eventsTable;
@@ -44,10 +44,10 @@ public class DisplayEController {
         colNameTeacher.setCellValueFactory(cellData -> cellData.getValue().getNameTeacherProperty());
         colNameSubject.setCellValueFactory(cellData -> cellData.getValue().getNameSubjectProperty());
         EventDB event = new EventDB();
-        ObservableList<EventFX> eventList = event.getAllFields();
+        ObservableList<Event> eventList = event.getAllFields();
         populateTable(eventList);
     }
-    private void populateTable(ObservableList<EventFX> eventList){
+    private void populateTable(ObservableList<Event> eventList){
         eventsTable.setItems(eventList);
     }
 }

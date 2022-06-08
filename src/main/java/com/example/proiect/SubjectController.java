@@ -13,13 +13,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SubjectsController {
+public class SubjectController {
     @FXML
-    private TableColumn<SubjectFX, Integer> colId;
+    private TableColumn<Subject, Integer> colId;
     @FXML
-    private TableColumn<SubjectFX, String> colName;
+    private TableColumn<Subject, String> colName;
     @FXML
-    private TableColumn<SubjectFX, String> colTip;
+    private TableColumn<Subject, String> colTip;
     Stage stage;
 
     @FXML
@@ -37,14 +37,13 @@ public class SubjectsController {
     private void initialize() throws Exception {
         colId.setCellValueFactory(cellData -> cellData.getValue().getIdProperty().asObject());
         colName.setCellValueFactory(cellData -> cellData.getValue().getNameProperty());
-        colTip.setCellValueFactory(cellData -> cellData.getValue().getTipProperty());
 
         SubjectDB subject = new SubjectDB();
-        ObservableList<SubjectFX> subjectList = subject.getAllFields();
+        ObservableList<Subject> subjectList = subject.getAllFields();
         populateTable(subjectList);
     }
 
-    private void populateTable(ObservableList<SubjectFX> subjectList) {
+    private void populateTable(ObservableList<Subject> subjectList) {
         subjectsTable.setItems(subjectList);
     }
 }

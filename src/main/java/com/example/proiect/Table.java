@@ -5,15 +5,13 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class StatsFX {
+public abstract class Table {
     private final IntegerProperty idProperty;
     private final StringProperty nameProperty;
-    private final StringProperty assignedRoomProperty;
 
-    public StatsFX() {
+    public Table() {
         this.idProperty = new SimpleIntegerProperty();
         this.nameProperty = new SimpleStringProperty();
-        this.assignedRoomProperty = new SimpleStringProperty();
     }
 
     public IntegerProperty getIdProperty() {
@@ -30,13 +28,5 @@ public class StatsFX {
 
     public void setNameProp(String name) {
         this.nameProperty.set(name);
-    }
-
-    public StringProperty getAssignedRoomProperty() {
-        return assignedRoomProperty;
-    }
-
-    public void setAssignedRoomProp(String assignedRoom) {
-        this.assignedRoomProperty.set(assignedRoom);
     }
 }
